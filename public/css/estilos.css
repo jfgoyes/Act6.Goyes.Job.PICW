@@ -1,97 +1,125 @@
-.times-new-roman {
-    font-family: 'Times New Roman', Times, serif;
-}
+/* Definimos un estilo para el body. */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 20px;
-    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f2fdf2;
+    background-color: white;
 }
 
-/* con estos estilos centramos las secciones y añadimos los margen */
+/* Establecemos tres fuentes distintas. */
+
+.times-new-roman {
+font-family: 'Times New Roman', Times, serif;
+}
+.arial {
+font-family: Arial, Helvetica, sans-serif;
+}
+.segoe-ui {
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Establecemos estilos para las tres secciones del aplicativo. */
+
 section {
-    margin-bottom: 30px;
-    border: 1px solid #000000;
-    padding: 15px;
-    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 25px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
     max-width: 600px;
-    width: 100%;
-    text-align: center;
-    background-color: #f2fdf2;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+section h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+/* Establecemos estilos para los inputs y selects en la aplicación web. */
+
+input, select {
+    margin: 10px 0;
+    padding: 10px;
+    width: 90%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-li {
-    margin-bottom: 5px;
-}
+
+/* Colocamos estilo para los botones del aplicativo. */
 
 button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 16px;
+    padding: 10px 18px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s ease;
     margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
-
 button:hover {
-    background-color: #45a049;
+    background-color: #388e3c;
 }
 
-/* aqui centramos los Inputs  */
-input, select {
-    margin: 8px;
-    padding: 8px;
-    width: 80%;
-    max-width: 300px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+/* Implementamos estilos para las listas del aplicativo. */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
 }
+li {
+    margin-bottom: 8px;
+    background-color: #f2fdf2;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Definimos los estilos para el resumen de la factura generada. */
 
 #resumen_factura {
-    border: 2px solid #4c95af;
-    padding: 15px;
-    background-color: #f9fff9;
-    max-width: 600px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 70, 128, 0.2);
+    border: 2px solid #4CAF50;
+    padding: 20px;
+    background-color: white;
+    max-width: 700px;
+    margin: 30px auto 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 128, 19, 0.2);
     text-align: center;
 }
 #resumen_factura table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 15px;
 }
 #resumen_factura th, #resumen_factura td {
-    border: 1px solid #4c82af;
-    padding: 8px;
+    border: 1px solid #4CAF50;
+    padding: 10px;
     text-align: center;
 }
 #resumen_factura th {
-    background-color: #4c86af;
+    background-color: #4CAF50;
     color: white;
 }
 
-/* Centrado del div de nuestra carátula */
+/* Centramos el contenedor div de la carátula. */
+
 div[style*="text-align: center"] {
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
+    font-size: 24px;
 }
 
-/* Ajustamos la imagen en pixeles*/
-img {
-    max-width: 200px;
-    margin-top: 10px;
+/* Colocamos el estilo del pie de página */
+
+.footer-facturacion {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
 }
