@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Act6.Goyes.Job.PICW</title>
     <link rel="stylesheet" href="./public/css/estilos.css">
+    <!-- Enlazamos el archivo manifest.json -->
+    <link rel="manifest" href="./manifest.json">
 </head>
 <body>
     <!-- Especificamos un contenedor para la carátula -->
@@ -89,5 +91,15 @@
     <script src="./public/js/clientes.js"></script>
     <script src="./public/js/productos.js"></script>
     <script src="./public/js/factura.js"></script>
+    <!-- Implementamos el service-worker.js en el html -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(reg => console.log('El service-worker.js fue registrado correctamente:', reg))
+                    .catch(err => console.error('El service-worker.js no pudo ser registrado:', err));
+            });
+        }
+    </script>
 </body>
 </html>
