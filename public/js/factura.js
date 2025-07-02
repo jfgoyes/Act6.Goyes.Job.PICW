@@ -80,7 +80,7 @@ function mostrarItemsFactura() {
     });
 
     // Mostramos el total final de la factura.
-    totalElement.textContent = `Total: $${total.toFixed(2)}`;
+    totalTexto.textContent = `Total: $${total.toFixed(2)}`;
 }
 
 /* Parte 2: Job Francesco Goyes Arcalle */
@@ -114,6 +114,7 @@ function guardarFactura () {
     facturas.push(factura);
     FacturaService.guardarFacturas(facturas);
     // Mostramos la factura con todos los datos elegidos por el usuario.
+    localStorage.setItem("ultimaFactura", JSON.stringify(factura));
     mostrarResumenFactura(factura);
 
     // Hacemos una limpieza de los datos agregados y actualizamos la lista.
@@ -154,6 +155,13 @@ function mostrarResumenFactura(factura) {
     document.getElementById("resumen_total").textContent = factura.total.toFixed(2);
     document.getElementById("resumen_factura").style.display = "block";
 }
+
 document.addEventListener("DOMContentLoaded", () => {
     mostrarItemsFactura();
+
+    const ultimaFactura = localStorage.getItem("ultimaFactura");
+    if (ultimaFactura) {
+        const factura = JSON.parse(ultimaFactura);
+        mostrarResumenFactura(factura);
+    }
 });
