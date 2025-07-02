@@ -13,7 +13,7 @@ const archivosAplicativoWeb = [
 
 // Creamos un evento el cual se va a ejecutar cuando se instale el service-worker.
 self.addEventListener('install', event => {
-    event.waitUtil(
+    event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => cache.addAll(archivosAplicativoWeb))
     );
