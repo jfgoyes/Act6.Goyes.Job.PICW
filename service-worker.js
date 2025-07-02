@@ -4,7 +4,6 @@ const CACHE_NAME = 'pwa-sistema-facturacion-cache-v1';
 const archivosAplicativoWeb = [
     './',
     './index.html',
-    './manifest.json',
     './public/css/estilos.css',
     './public/img/factura_logo.png',
     './public/js/clientes.js',
